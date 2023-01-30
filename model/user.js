@@ -1,14 +1,6 @@
 const mongoose = require('mongoose');
 
-/*creating a schema to store the object
-// {SAMPLE
-// //     "first_name" : "John",
-//         "last_name" : "Doe",
-//         "email" : "john@example.com
-//         "salary" : 100000.00
-//         "gender" : "male"
-    }   
-*/
+
 
 //Employee schema created 
 const employeeSchema = mongoose.Schema({
