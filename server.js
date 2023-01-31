@@ -27,13 +27,9 @@ mongoose.connect(DB_URL, {
     process.exit();
 });
 
-app.use("/api/emp/",employeeRouter) //For the employee page
+// app.use("/api/emp/",employeeRouter) //For the employee page
+// app.use("/api/user/",userRouter) // For the user page
 
-app.use("/api/user/",userRouter) // For the user page
-
-app.route("/").get((req,res)=>{
-    res.send("<h1>Assignment 1 - MongoDb using NodeJS and Express</h1>");
-})
     
 //Refers to the port beign used 
 app.listen(SERVER_PORT, () =>{
