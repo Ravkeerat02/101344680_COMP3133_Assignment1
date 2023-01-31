@@ -18,3 +18,5 @@ Full Stack 2 Assignment
 
 ### Resources 
 [Queries and Mutation Example](https://www.youtube.com/watch?v=PQvux9OAaBE)
+<br>
+[Mutation](https://www.youtube.com/watch?v=NYCG1o38oEQ)
