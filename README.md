@@ -12,3 +12,9 @@ Full Stack 2 Assignment
 | Query     | Search employee by eid  | User can get employee details by employee id   |
 | Mutation     | Update employee by eid     | User can update employee details   |
 | Mutation     | Delete employee by eid     | User can delete employee by employee id   |
+
+
+<br><br>
+
+### Resources 
+[Queries and Mutation Example](https://www.youtube.com/watch?v=PQvux9OAaBE)
