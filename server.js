@@ -1,9 +1,11 @@
+const {ApolloServer} = require('apollo-server');
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
-const employeeRouter = require('./routes/employeeRoute');
-const userRouter = require('./routes/userRoute');
+
+// const employeeRouter = require('./routes/employeeRoute');
+// const userRouter = require('./routes/userRoute');
 
 const SERVER_PORT = 4000 //port numberer initialized
 

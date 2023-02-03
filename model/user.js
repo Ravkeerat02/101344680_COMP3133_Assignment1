@@ -1,40 +1,36 @@
 const mongoose = require('mongoose');
 
+/* SAMPLE DATE
+{
+    username : "p@p.com",
+    "password" : "password$123",
+    "email" : ""abc@gmail.com"
 
+}
+*/
 
-//Employee schema created 
-const employeeSchema = mongoose.Schema({
-
-    first_name:{
-        type:String,
-        required: true,
-        max:100
-    },
-
-    last_name:{
-        type:String,
-        required: true,
-        max:50
+//creating schema to store the objects
+const userSchema = new mongoose.Schema({
+    
+    username :{
+        type: String,
+        required: true,            
+        primaryKey: true,
+        max: 100,
     },
 
     email:{
+        type: String, 
+        required:true,
+        max:100
+    },
+    
+    password:{
         type:String,
-        required: true,
-        unique: true,
-         
-    },
-
-    salary:{
-        type:Number,
-        required: true
-    },
-
-    gender:{
-        type: String,
-        //enum - sets to predefined values - here it refers to different gender
-        emum :['Male','Female','Other' ]
-
+        required:true,
+        unique: true
     }
-})
 
-module.exports = mongoose.model('employee', employeeSchema);
+});
+
+module.exports = mongoose.model('users', userSchema);

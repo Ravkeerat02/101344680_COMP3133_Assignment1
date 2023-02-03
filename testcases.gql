@@ -1,0 +1,39 @@
+#Mutation signup - create new accoutn 
+mutation signup($)
+#query - access to system 
+
+#query - get all employees
+
+#mutation - create new employee
+mutation createEmployee($first_name: String!, $last_name: String!, $email: String!,$salary: Number!,$gender: String) {
+  createEmployee(first_name: $first_name, last_name: $last_name, email: $email,salary: $salary, gender: $gender) {
+    first_name, 
+    last_name, 
+    email, 
+    salary,
+    gender
+  }
+}
+#query - get employee by id 
+
+#mutation - udpate employee
+mutation updateEmployee($first_name: String!, $last_name: String!, $email: String!,$salary: Number!,$gender: String) {
+  updateEmployee(first_name: $first_name, last_name: $last_name, email: $email,salary: $salary, gender: $gender) {
+    first_name, 
+    last_name, 
+    email, 
+    salary,
+    gender
+  }
+}
+#mutation - delete employee by id 
+
+mutation deleteEmployee($first_name: String!, $last_name: String!, $email: String!,$salary: Number!,$gender: String) {
+  updateEmployee(first_name: $first_name, last_name: $last_name, email: $email,salary: $salary, gender: $gender) {
+    first_name, 
+    last_name, 
+    email, 
+    salary,
+    gender
+  }
+}
