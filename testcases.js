@@ -30,7 +30,20 @@ schema {
 }
 
 #query - get all employees
+type Query {
+  employees: [Employee]!
+}
 
+type Employee {
+  id: ID!
+  name: String!
+  title: String!
+  department: String!
+}
+
+schema {
+  query: Query
+}
 
 #mutation - create new employee
 mutation createEmployee($first_name: String!, $last_name: String!, $email: String!,$salary: Number!,$gender: String) {
