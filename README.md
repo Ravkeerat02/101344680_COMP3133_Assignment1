@@ -20,3 +20,5 @@ Full Stack 2 Assignment
 [Queries and Mutation Example](https://www.youtube.com/watch?v=PQvux9OAaBE)
 <br>
 [Mutation](https://www.youtube.com/watch?v=NYCG1o38oEQ)
+<br>
+[Setting it up](https://github.com/GeoffMahugu/apollo-backend/blob/master/graphql/resolvers.js)
