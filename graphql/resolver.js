@@ -2,26 +2,7 @@ const employee = require('../model/employee');
 const user = require('../model/user');
 
 module.exports = {
-// //    //create new account 
-// //    *@param{username, email, password}} UserInput 
-// //    @returns{user}
 
-//     // @mutation
-//     // mutation{
-//     //     createSecureServer(UserInput){
-//     //         username
-//     //         email
-//     //         password
-//     //     }
-//     // }
-//     //createEmployee(employeeInput){
-//     //     first_name
-//     //     last_name
-//     //     email
-//     //     salary
-//     // }
-//     }
-// }
 
 //allow user to create new account
 
@@ -58,5 +39,5 @@ async updateEmployee(_,{ID, EmployeeInput:{first_name, last_name, email, salary}
 //allow user to delete employee
 async deleteEmployee(_,{ID}){await Employee.deleteOne({_id: ID}).deleteCount;
     return wasDeleted;
-}
+},
 }

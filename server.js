@@ -3,9 +3,14 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
+//Apollo server
+const {typeDefs} = require('./graphql/typeDefs');
+const {resolvers} = require('./graphql/resolver');
 
-// const employeeRouter = require('./routes/employeeRoute');
-// const userRouter = require('./routes/userRoute');
+const Server = new ApolloServer({
+    typeDefs
+    ,resolvers
+});
 
 const SERVER_PORT = 4000 //port numberer initialized
 
@@ -29,10 +34,7 @@ mongoose.connect(DB_URL, {
     process.exit();
 });
 
-// app.use("/api/emp/",employeeRouter) //For the employee page
-// app.use("/api/user/",userRouter) // For the user page
 
-    
 //Refers to the port beign used 
 app.listen(SERVER_PORT, () =>{
     console.log(`Server running at http://localhost:${SERVER_PORT}/`)

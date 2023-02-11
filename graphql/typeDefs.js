@@ -1,6 +1,6 @@
-const { buildSchema } = require('graphql');
+const { gql } = require('graphql');
 
-module.exports = buildSchema(`
+module.exports = gql`
 
 type User{
     username: String!
@@ -15,13 +15,14 @@ type Employee{
     salary: Float!
 }
 
-type RootQuery{
+type Query{
     users: userData!
     employee: employeeData!
 
-type RootMutation{
+type Mutation{
     createUser(UserInput: UserInputData): User!
-}
+    createEmployee(EmployeeInput: EmployeeInputData): Employee!
+    updateEmployee(ID: ID!, EmployeeInput: EmployeeInputData): Boolean!
+    deleteEmployee(ID: ID!): Boolean!
+}`
 
-
-`)
