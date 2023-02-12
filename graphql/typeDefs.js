@@ -7,8 +7,6 @@ type User{
     username: String!
     email: String!
     password: String!
-    salary: Float!
-    gender: String!
 }
 
 type Employee{
@@ -16,6 +14,7 @@ type Employee{
     last_name: String!
     email: String!
     salary: Float!
+    gender: String!
 }
 input UserInput{
     username: String!
@@ -28,14 +27,13 @@ input EmployeeInput{
     last_name: String!
     email: String!
     salary: Float!
+    gender: String!
 }
 
 input UserInputData{
     username: String!
     email: String!
     password: String!
-    salary: Float!
-    gender: String!
 }
 
 input EmployeeInputData{
@@ -43,10 +41,14 @@ input EmployeeInputData{
     last_name: String!
     email: String!
     salary: Float!
+    gender: String!
 }
+
 type Query{
-    users: [User]
-    employees: [Employee]
+    getUser(username: String!, password: String!, email: String!): User!
+    employeeID(ID: ID!): Employee!
+    viewEmployees: [Employee!]!
+
 }
 
 
