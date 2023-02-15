@@ -4,9 +4,10 @@ const { gql } = require('apollo-server')
 module.exports = gql`
 
 type User{
-    username: String
-    email: String
-    password: String
+    username: String!
+    email: String!
+    password: String!
+    
 }
 
 type Employee{
@@ -17,26 +18,12 @@ type Employee{
     gender: String
 }
 input UserInput{
-    username: String
-    email: String
-    password: String
+    username: String!
+    password: String!
+    email: String!
 }
 
 input EmployeeInput{
-    first_name: String
-    last_name: String
-    email: String
-    salary: Float
-    gender: String
-}
-
-input UserInputData{
-    username: String
-    email: String
-    password: String
-}
-
-input EmployeeInputData{
     first_name: String
     last_name: String
     email: String
@@ -52,10 +39,10 @@ type Query{
 
 
 type Mutation{
-    createUser(userInput: UserInputData): User
-    createEmployee(employeeInput: EmployeeInputData): Employee
-    updateEmployee(ID: ID!, employeeInput: EmployeeInputData): Boolean
-    deleteEmployee(ID: ID!): Boolean
+    createUser(userInput: UserInput): User!
+    createEmployee(employeeInput: EmployeeInput): Employee!
+    updateEmployee(ID: ID!, employeeInput: EmployeeInput): Boolean!
+    deleteEmployee(ID: ID!): Boolean!
 }`
 
 
