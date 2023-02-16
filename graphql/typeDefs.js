@@ -22,6 +22,10 @@ input UserInput{
     password: String!
     email: String!
 }
+input loginInput{
+    username: String!
+    password: String!
+}
 
 input EmployeeInput{
     first_name: String
@@ -31,17 +35,24 @@ input EmployeeInput{
     gender: String
 }
 
+input updateEmployeeInput{
+    first_name: String
+    last_name: String
+    email: String
+
+}
+
 type Query{
-    getUser(username: String, password: String, email: String!): User
+    getUsers: User
     employeeID(ID: ID!): Employee
-    viewEmployees: [Employee!]!
+    loginUser(loginInput: loginInput): User
 }
 
 
 type Mutation{
     createUser(userInput: UserInput): User!
     createEmployee(employeeInput: EmployeeInput): Employee!
-    updateEmployee(ID: ID!, employeeInput: EmployeeInput): Boolean!
+    updateEmployee(ID: ID!, employeeInput: updateEmployeeInput): Employee!
     deleteEmployee(ID: ID!): Boolean!
 }`
 
