@@ -59,6 +59,17 @@ const resolvers = {
         return users;
       } catch (err) {
         return {
+          message: "Error fetching all user",
+        };
+      }
+    },
+
+    async getEmployees() {
+      try {
+        const emps = await employee.find();
+        return emps;
+      } catch (err) {
+        return {
           message: "Error fetching all employees",
         };
       }
