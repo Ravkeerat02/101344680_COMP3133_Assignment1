@@ -26,5 +26,5 @@ Full Stack 2 Assignment
 ![Get User](https://github.com/Ravkeerat02/101344680_COMP3133_Assignment1/blob/master/ss/get_users.png)
 ![Employee ID](https://github.com/Ravkeerat02/101344680_COMP3133_Assignment1/blob/master/ss/emp_id.png)
 ![Login User](https://user-images.githubusercontent.com/42888466/219798246-22cbb0ec-55a5-456d-b5f0-812b4a03b1df.png)
-![Get Employee](https://github.com/Ravkeerat02/101344680_COMP3133_Assignment1/blob/master/ss/get_emp.png)
+
 
