@@ -1,13 +1,6 @@
+//Ravkeerat Singh - 101344680
 const mongoose = require('mongoose');
 
-/* SAMPLE DATE
-{
-    username : "p@p.com",
-    "password" : "password$123",
-    "email" : ""abc@gmail.com"
-
-}
-*/
 
 //creating schema to store the objects
 const userSchema = new mongoose.Schema({
@@ -30,7 +23,6 @@ const userSchema = new mongoose.Schema({
         required:true,
         unique: true
     }
-
 });
 
 module.exports = mongoose.model('users', userSchema);
