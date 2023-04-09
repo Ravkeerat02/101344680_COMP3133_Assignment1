@@ -13,7 +13,7 @@ const Server = new ApolloServer({
     resolvers
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 
 //DB connection string
 const DB_URL = "mongodb+srv://RK_02:ab8UjMGR44roYdJH@cluster0.iu4uasl.mongodb.net/comp3133_assignmnet1?retryWrites=true&w=majority"
