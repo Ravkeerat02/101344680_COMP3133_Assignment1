@@ -10,7 +10,8 @@ const resolvers = require('./graphql/resolvers');
 
 const Server = new ApolloServer({
     typeDefs,
-    resolvers
+    resolvers, introspection: true, // Enable introspection
+    playground: true, // Enable the GraphiQL UI
 });
 
 const PORT = process.env.PORT || 8080;
